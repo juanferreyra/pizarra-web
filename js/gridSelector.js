@@ -29,9 +29,9 @@
 
 	gridSelector.prototype = {
 		defaults : {
-			rows : 5,
-			columns : 5,
-			maxcolumns : 5,
+			rows : 7,
+			columns : 6,
+			maxcolumns : 6,
 			onClick : function() { return false; }
 		},
 		_init : function() {
