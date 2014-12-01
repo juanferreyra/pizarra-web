@@ -11,16 +11,18 @@
 		<link rel="shortcut icon" href="../favicon.ico"> 
 		<link rel="stylesheet" type="text/css" href="css/default.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/default-nl.css" />
+		<link rel="stylesheet" type="text/css" href="css/component-nl.css" />
 		<script src="js/modernizr.custom.js"></script>
 	</head>
 	<body>
 		<div class="container demo-1">
 			<div id="gt-grid-selector" class="gt-grid-control">
-				<!--	<span class="gt-grid-icon"></span>
+				<span class="gt-grid-icon"></span>
 				<div class="gt-grid-select">
 					<div></div><div></div><div></div><div></div><div></div><div></div><div></div>
 					
-				</div>-->
+				</div>
 			</div>
 			<div id="gt-grid" class="gt-grid">
 				<!--
@@ -33,7 +35,30 @@
 				-->
 				<div class="div-verde"><h3>9</h3></div>
 				<div class="div-verde"><h3>10</h3></div>
-				<div class="div-verde"><h3>11</h3><!--|Juan Jose Prueba | 22kg <br />Rinitis | Alergia <br/>Tuberculosis | Fractura de coxis--></div>
+				<div class="div-verde">
+					<form id="nl-form" class="nl-form">
+						El paciente
+						<input type="text" value="" placeholder="Un paciente" data-subline="Por ejemplo: <em>Juan Pedro</em> or <em>Roberto Giordano</em>"/>
+						de peso
+						<select>
+							<option value="1" selected>un peso</option>
+							<option value="1">64 Kg.</option>
+						 	<option value="2">75 Kg.</option>
+						 	<option value="3">90 Kg.</option>
+						</select>
+						<br />,proviene del servicio de 
+						<select>
+							<option value="1" selected>un origen</option>
+							<option value="2">casa</option>
+							<option value="3">clinica medica</option>
+							<option value="4">shock</option>
+							<option value="5">tu casa tuto</option>
+						</select>
+						<div class="nl-submit-wrap">
+							<button class="nl-submit" type="submit">Ver Paciente</button>
+						</div>
+					</form>
+				</div>
 				
 				<div class="div-rojo"><h3>11</h3></div>
 				<div class="div-rojo"><h3>10</h3></div>
@@ -49,10 +74,10 @@
 				<div class="div-rojo"><h3>8</h3></div>
 				<div class="div-verde"><h3>7</h3></div>
 
-				<div class="div-verdeclaro"><h1 style="text-align:left !important; position:relative !important; width:100% !important; height:10% !important;">UCIRQ</h1></div>
+				<div class="div-verdeclaro"><h1 style="text-align:left !important; position:relative !important; width:100% !important; height:10% !important; font-size:2em !important;">UCIRQ</h1></div>
 				<div class="div-verdeclaro"><h3></h3></div>
 				<div class="div-rojoclaro"><h3></h3></div>
-				<div class="div-rojoclaro"><h1 style="text-align:right !important; position:relative !important;">UCI</h1></div>
+				<div class="div-rojoclaro"><h1 style="text-align:right !important; position:relative !important; font-size:2em !important;">UCI</h1></div>
 
 				<div class="div-rojo"><h3>7</h3></div>
 				<div class="div-verde"><h3>6</h3></div>
@@ -88,12 +113,17 @@
 			</div>
 
 		</div><!-- /container -->
+		<div class="nl-overlay"></div>
 		<!-- classie.js by @desandro: https://github.com/desandro/classie -->
 		<script src="js/classie.js"></script>
 		<script src="js/gridSelector.js"></script>
 		<script src="js/grid.js"></script>
 		<script>
 			Grid.init();
+		</script>
+		<script src="js/nlform.js"></script>
+		<script>
+			var nlform = new NLForm( document.getElementById( 'nl-form' ) );
 		</script>
 	</body>
 </html>
