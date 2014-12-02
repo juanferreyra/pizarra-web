@@ -36,12 +36,14 @@ a:active {
 	color: #fff;
 }
 
-.container {
+.containerVerde {
+	float: left;
 	height: 100%;
+	width: 50%;
 }
 
 /* To Navigation Style */
-.codrops-top {
+.codrops-topVerde {
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 0.69em;
@@ -50,7 +52,7 @@ a:active {
 	left: 0;
 }
 
-.codrops-top a {
+.codrops-topVerde a {
 	letter-spacing: 1px;
 	display: block;
 	padding: 0 1em 1em;
