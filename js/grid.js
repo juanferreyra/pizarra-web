@@ -1,4 +1,4 @@
-var GridRojo = (function() {
+var Grid = (function() {
 
 	function extend( a, b ) {
 		for( var key in b ) { 
@@ -10,8 +10,8 @@ var GridRojo = (function() {
 	}
 
 	var config = {
-			items : Array.prototype.slice.call( document.querySelectorAll( '#gt-gridRojo > div' ) ),
-			gridSel : new gridSelectorRojo( document.getElementById( 'gt-gridRojo-selector' ), {
+			items : Array.prototype.slice.call( document.querySelectorAll( '#gt-grid > div' ) ),
+			gridSel : new gridSelector( document.getElementById( 'gt-grid-selector' ), {
 				onClick : function() { initGrid(); }
 			} )
 		},
