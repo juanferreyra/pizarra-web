@@ -1,5 +1,8 @@
 <?php
 
+include_once 'laboratorio.class.php';
+
+
 class Internaciones{
 
     var $tet; //tubo endotraqueal
@@ -21,7 +24,7 @@ class Internaciones{
     
     function Internaciones()
     {
-        
+        $this->laboratorio = new Laboratorio();
     }
     
     //Set
@@ -48,6 +51,11 @@ class Internaciones{
     function setFechaInternacion($value)
     {
         $this->fechaInternacion = $value;
+    }
+
+    function addItemLaboratorio ($descripcion, $indice, $valor)
+    {
+        $this->laboratorio->agregarItem($descripcion, $indice, $valor);
     }
     
     //Get

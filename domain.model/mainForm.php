@@ -90,4 +90,4 @@
 </tr>
 </table>
 <br /><br />
-<button style="width:80%; height:30%;">LE SUBMIT</button>
+<button >LE SUBMIT</button>

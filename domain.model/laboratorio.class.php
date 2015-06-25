@@ -12,18 +12,18 @@ include_once 'itemLaboratorio.class.php';
  *
  * @author jferreyra
  */
-class laboratorio 
+class Laboratorio 
 {
     var $items;
     
-    public function laboratorio()
+    public function Laboratorio()
     {
         $this->items = array();
     }
     
-    public function agregarItem($descripcion, $valor)
+    public function agregarItem($descripcion, $indice ,$valor)
     {
-        $this->items[] = new ItemLaboratorio($descripcion, $valor);
+        $this->items[] = new ItemLaboratorio($descripcion, $indice ,$valor);
     }
     
     public function getItems()

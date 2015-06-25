@@ -13,12 +13,14 @@
  */
 class itemLaboratorio
 {
-    var $nombre;
+    var $descripcion;
     var $valor;
+    var $indice;
     
-    public function ItemLaboratorio($descripcion, $valor)
+    public function ItemLaboratorio($descripcion, $indice, $valor)
     {
-        $this->nombre = $descripcion;
+        $this->descripcion = $descripcion;
         $this->valor = $valor;
+        $this->indice = $indice;
     }
 }
