@@ -30,4 +30,10 @@ class Laboratorio
     {
         return $this->items;
     }
+
+    public function getCantItems()
+    {
+        $cant = count($this->items);
+        return $cant;
+    }
 }

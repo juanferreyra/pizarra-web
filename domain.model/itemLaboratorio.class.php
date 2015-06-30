@@ -23,4 +23,9 @@ class itemLaboratorio
         $this->valor = $valor;
         $this->indice = $indice;
     }
+
+    public function getDescripcion()
+    {
+        return $this->descripcion;
+    }
 }
