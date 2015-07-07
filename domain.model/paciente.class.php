@@ -1,15 +1,12 @@
 <?php
-include_once 'internacion.class.php';
 
 class Paciente
 {
         var $tipodoc;
         var $nrodoc;
         var $nombre;
-        var $edad;
-        var $peso;
-    //hay que agregarle la clase internaciones
-        var $internaciones;
+        var $fechaNac;
+        var $nroHisclin;
 
 	function Paciente() 
 	{
@@ -27,25 +24,20 @@ class Paciente
 		$this->nrodoc = $value;
 	}
     
-    function setNombre($value)
+        function setNombre($value)
 	{
 		$this->nombre = $value;
 	}
     
-    function setEdad($value)
+        function setFechaNac($value)
 	{
-		$this->edad = $value;
+		$this->fechaNac = $value;
 	}
     
-    function setPeso($value)
+        function setNroHisClin($value)
 	{
-		$this->peso = $value;
+		$this->nroHisclin = $value;
 	}
-    
-    function setInternaciones(Internaciones $value)
-    {
-        $this->internaciones = $value;
-    }
 
 	//Get
 	function getTipodoc()
@@ -58,23 +50,19 @@ class Paciente
 		return $this->nrodoc;
 	}
     
-    function getNombre()
+        function getNombre()
 	{
 		return $this->nombre;
 	}
     
-    function getEdad()
+        function getFechaNac()
 	{
-		return $this->edad;
+		return $this->fechaNac;
 	}
     
-    function getPeso()
+        function getNroHisCLin()
 	{
-		return $this->peso;
-	}
-    function getInternaciones()
-	{
-		return $this->internaciones;
+		return $this->nroHisclin;
 	}
 }
 ?>
