@@ -2,11 +2,11 @@
 
 class Paciente
 {
-        var $tipodoc;
-        var $nrodoc;
-        var $nombre;
-        var $fechaNac;
-        var $nroHisclin;
+    var $tipodoc;
+    var $nrodoc;
+    var $nombre;
+    var $fechaNac;
+    var $nroHisclin;
 
 	function Paciente() 
 	{

@@ -1,16 +1,15 @@
 <?php
-
+include_once 'paciente.class.php';
 include_once 'laboratorio.class.php';
 
-
-class Internaciones{
-
+class Internaciones
+{
+    var $paciente;
     var $tet; //tubo endotraqueal
     var $cvc; //cateter venoso caasdasd
     var $ca;
     var $procedencia;
-    var $fechaInternacion;
-    //estas deberian estar en internacion?
+    var $fechaInternacion;//estas deberian estar en internacion?
     var $laboratorio;
     var $examenComplementario;
     var $cultivos;
@@ -25,6 +24,7 @@ class Internaciones{
     function Internaciones()
     {
         $this->laboratorio = new Laboratorio();
+        $this->paciente = new Paciente();
     }
     
     //Set
