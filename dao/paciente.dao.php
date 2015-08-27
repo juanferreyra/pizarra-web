@@ -17,7 +17,7 @@ class pacienteDao
 {
     var $db;
     
-    function KioscoDatabaseLinker()
+    function PacienteDao()
     {
         $this->db = new dataBaseConnector(HOSTLocal,0,DBUti,USRDBAdmin,PASSDBAdmin);
     }
