@@ -82,3 +82,59 @@ CREATE TABLE `paciente` (
   `nrohisclin` int(11) DEFAULT NULL,
   PRIMARY KEY (`tipodoc`,`nrodoc`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `uti`.`laboratorio_item` (
+  `id` INT NOT NULL AUTO_INCREMENT COMMENT '',
+  `detalle` VARCHAR(45) NULL COMMENT '',
+  `tipo` ENUM('ORINA', 'SANGRE') NULL COMMENT '',
+  PRIMARY KEY (`id`)  COMMENT '');
+
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('1', 'hto', 'SANGRE');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('2', 'hb', 'SANGRE');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('3', 'gblancos', 'SANGRE');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('4', 'plaq', 'SANGRE');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('5', 'glucemia', 'SANGRE');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('6', 'urea', 'SANGRE');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('7', 'creat', 'SANGRE');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('8', 'na', 'SANGRE');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('9', 'k', 'SANGRE');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('10', 'lactico', 'SANGRE');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('11', 'got', 'SANGRE');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('12', 'gpt', 'SANGRE');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('13', 'amilasa', 'SANGRE');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('14', 'bt', 'SANGRE');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('15', 'bd', 'SANGRE');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('16', 'fal', 'SANGRE');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('17', 'tprot', 'SANGRE');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('18', 'apttseg', 'SANGRE');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('19', 'ph', 'SANGRE');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('20', 'co2', 'SANGRE');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('21', 'excbase', 'SANGRE');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('22', 'hco3', 'SANGRE');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('23', 'po2', 'SANGRE');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('24', 'saro2', 'SANGRE');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('25', 'cpk', 'SANGRE');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('26', 'esd', 'SANGRE');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('27', 'pcr', 'SANGRE');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('28', 'procalcitonina', 'SANGRE');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('29', 'lcrorina', 'ORINA');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('30', 'gborina', 'ORINA');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('31', 'protorina', 'ORINA');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('32', 'glucorina', 'ORINA');
+INSERT INTO `uti`.`laboratorio_item` (`id`, `detalle`, `tipo`) VALUES ('33', 'aspectoorina', 'ORINA');
+
+CREATE TABLE `internacion_laboratorio` (
+  `idinternacion_laboratorio` int(11) NOT NULL AUTO_INCREMENT,
+  `idinternacion` int(11) DEFAULT NULL,
+  `idlaboratorio` int(11) DEFAULT NULL,
+  `fecha_creacion` datetime DEFAULT NULL,
+  `habilitado` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`idinternacion_laboratorio`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE `uti`.`internacion_laboratorio_valores` (
+  `idlaboratorio_item` INT NOT NULL COMMENT '',
+  `idinternacion_laboratorio` INT NULL COMMENT '',
+  `valor` VARCHAR(45) NULL COMMENT '',
+  PRIMARY KEY (`idlaboratorio_item`)  COMMENT '');
