@@ -1,5 +1,6 @@
 <h3>Sangre</h3>
 <hr>
+<form id="frmLaboratorio" action="../../services/laboratorio.service.php" method="POST">
 <table>
 <tr>
 <td><label for='hto'>Hto</label></td>
@@ -14,16 +15,16 @@
 <td><label for='lactico'>Lactico</label></td>
 </tr>
 <tr>
-<td><input type='text' id='hto' /></td>
-<td><input type='text' id='hb' /></td>
-<td><input type='text' id='gblancos' /></td>
-<td><input type='text' id='plaq' /></td>
-<td><input type='text' id='glucemia' /></td>
-<td><input type='text' id='urea' /></td>
-<td><input type='text' id='creat' /></td>
-<td><input type='text' id='na' /></td>
-<td><input type='text' id='k' /></td>
-<td><input type='text' id='lactico' /></td>
+<td><input type='text' name='hto' /></td>
+<td><input type='text' name='hb' /></td>
+<td><input type='text' name='gblancos' /></td>
+<td><input type='text' name='plaq' /></td>
+<td><input type='text' name='glucemia' /></td>
+<td><input type='text' name='urea' /></td>
+<td><input type='text' name='creat' /></td>
+<td><input type='text' name='na' /></td>
+<td><input type='text' name='k' /></td>
+<td><input type='text' name='lactico' /></td>
 </tr>
 <tr>
 <td><label for='got'>Got</label></td>
@@ -36,14 +37,14 @@
 <td><label for='apttseg'>Aptt seg</label></td>
 </tr>
 <tr>
-<td><input type='text' id='got' /></td>
-<td><input type='text' id='gpt' /></td>
-<td><input type='text' id='amilasa' /></td>
-<td><input type='text' id='bt' /></td>
-<td><input type='text' id='bd' /></td>
-<td><input type='text' id='fal' /></td>
-<td><input type='text' id='tprot' /></td>
-<td><input type='text' id='apttseg' /></td>
+<td><input type='text' name='got' /></td>
+<td><input type='text' name='gpt' /></td>
+<td><input type='text' name='amilasa' /></td>
+<td><input type='text' name='bt' /></td>
+<td><input type='text' name='bd' /></td>
+<td><input type='text' name='fal' /></td>
+<td><input type='text' name='tprot' /></td>
+<td><input type='text' name='apttseg' /></td>
 </tr>
 <tr>
 <td><label for='ph'>Ph</label></td>
@@ -55,13 +56,13 @@
 <td><label for='cpk'>Cpk</label></td>
 </tr>
 <tr>
-<td><input type='text' id='ph' /></td>
-<td><input type='text' id='co2' /></td>
-<td><input type='text' id='excbase' /></td>
-<td><input type='text' id='hco3' /></td>
-<td><input type='text' id='po2' /></td>
-<td><input type='text' id='saro2' /></td>
-<td><input type='text' id='cpk' /></td>
+<td><input type='text' name='ph' /></td>
+<td><input type='text' name='co2' /></td>
+<td><input type='text' name='excbase' /></td>
+<td><input type='text' name='hco3' /></td>
+<td><input type='text' name='po2' /></td>
+<td><input type='text' name='saro2' /></td>
+<td><input type='text' name='cpk' /></td>
 </tr>
 <tr>
 <td><label for='esd'>ESD</label></td>
@@ -69,9 +70,9 @@
 <td><label for='procalcitonina'>Procalcitonina</label></td>
 </tr>
 <tr>
-<td><input type='text' id='esd' /></td>
-<td><input type='text' id='pcr' /></td>
-<td><input type='text' id='procalcitonina' /></td>
+<td><input type='text' name='esd' /></td>
+<td><input type='text' name='pcr' /></td>
+<td><input type='text' name='procalcitonina' /></td>
 </tr>
 </table>
 <h3>Orina</h3>
@@ -86,10 +87,12 @@
 <td><label for='aspectoorina'>Aspecto</label></td>
 </tr>
 <tr>
-<td><input type='text' id='lcrorina' /></td>
-<td><input type='text' id='gborina' /></td>
-<td><input type='text' id='protorina' /></td>
-<td><input type='text' id='glucorina' /></td>
-<td><input type='text' id='aspectoorina' /></td>
+<td><input type='text' name='lcrorina' /></td>
+<td><input type='text' name='gborina' /></td>
+<td><input type='text' name='protorina' /></td>
+<td><input type='text' name='glucorina' /></td>
+<td><input type='text' name='aspectoorina' /></td>
 </tr>
 </table>
+<input type="submit" value="Submit">
+</form>

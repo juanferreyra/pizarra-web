@@ -1,6 +1,7 @@
 <?php
 
 include_once 'dataBaseConnector.php';
+include_once 'conectionData.php';
 include_once '../domain.model/laboratorio.class.php';
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -22,7 +23,7 @@ class laboratorioDao
         $this->db = new dataBaseConnector(HOSTLocal,0,DBUti,USRDBAdmin,PASSDBAdmin);
     }
 
-    function insertarLaboratorio($idlaboratorio_item, $data)
+    function insertarLaboratorio($data)
     {
         for($i = 1; $i <= count($data); $i++ )
         {
@@ -33,7 +34,7 @@ class laboratorioDao
                         `idinternacion_laboratorio`,
                         `valor`)
                     VALUES
-                        (".$idlaboratorio_item.",
+                        (".$data[$i]['idlaboratorio_item'].",
                         '".$data[$i]['idinternacion_laboratorio'].",
                         '".$data[$i]['valor']."');";
 
@@ -80,8 +81,6 @@ class laboratorioDao
             $e->getMessage();
             throw new Exception("Error al conectar con la base de datos", 17052013);
         }
-
-        }  
 
         $this->db->desconectar();
         return true;

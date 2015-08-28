@@ -1,6 +1,7 @@
 <?php
 
 include_once 'dataBaseConnector.php';
+include_once 'conectionData.php';
 include_once '../domain.model/paciente.class.php';
 /*
  * To change this license header, choose License Headers in Project Properties.
