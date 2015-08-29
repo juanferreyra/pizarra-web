@@ -23,36 +23,46 @@ class laboratorioDao
         $this->db = new dataBaseConnector(HOSTLocal,0,DBUti,USRDBAdmin,PASSDBAdmin);
     }
 
-    function insertarLaboratorio($data)
+    //generarle un stdclass para devolver cuado reciba realmente idinternacion_laboratorio
+    function insertarLaboratorio($data, $idinternacion_laboratorio)
     {
-        for($i = 1; $i <= count($data); $i++ )
+        
+        foreach($data as $key => $valor)
         {
+        if(strlen($valor) != 0)
+        {
+            $idlaboratorio_item = $this->getItemLaboratorio($key);
+            $query = "INSERT INTO
+                        internacion_laboratorio_valores
+                            (`idlaboratorio_item`,
+                            `idinternacion_laboratorio`,
+                            `valor`)
+                        VALUES
+                            (".$idlaboratorio_item['id'].",
+                            ".$idinternacion_laboratorio.",
+                            '".$valor."')
 
-        $query = "INSERT INTO
-                    internacion_laboratorio_valores
-                        (`idlaboratorio_item`,
-                        `idinternacion_laboratorio`,
-                        `valor`)
-                    VALUES
-                        (".$data[$i]['idlaboratorio_item'].",
-                        '".$data[$i]['idinternacion_laboratorio'].",
-                        '".$data[$i]['valor']."');";
+                            ON DUPLICATE KEY UPDATE    
+                            valor='".$valor."';";
 
-        try
-        {
-            $this->db->conectar();
-            $this->db->ejecutarAccion($query);
-        }
-        catch (Exception $e)
-        {
+
+
+            try
+            {
+                $this->db->conectar();
+                $this->db->ejecutarAccion($query);
+            }
+            catch (Exception $e)
+            {
+                $this->db->desconectar();
+                $e->getMessage();
+                throw new Exception("Error al conectar con la base de datos", 17052013);
+            }
+
+            }  
+
             $this->db->desconectar();
-            $e->getMessage();
-            throw new Exception("Error al conectar con la base de datos", 17052013);
         }
-
-        }  
-
-        $this->db->desconectar();
         return true;
     }
 
@@ -87,10 +97,10 @@ class laboratorioDao
         
     }
 
-    function getItemLaboratorio($data)
+    function getItemLaboratorio($laboratorio)
     {
-        $query = "SELECT * FROM laboratorio_item WHERE detalle = ".$data['laboratorio'].";";
-
+        $query = "SELECT * FROM laboratorio_item WHERE detalle = '".$laboratorio."';";
+        
         try
         {
             $this->db->conectar();

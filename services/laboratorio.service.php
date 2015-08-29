@@ -4,3 +4,12 @@
 //para llenar todas las tablas
 
 $laboDb = new LaboratorioDao ();
+
+if($laboDb->insertarLaboratorio($_POST, 1))
+{
+    echo "Datos cargados correctamente";
+}
+else
+{
+    echo "Hubo un error al cargar los datos";
+}
