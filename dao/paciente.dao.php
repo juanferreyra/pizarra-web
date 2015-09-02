@@ -93,6 +93,55 @@ class pacienteDao
 
 	return $p;
     }
+
+    function insertarNuevoPeso($data)
+    {
+        //por ahora lo agrego en paciente, hay que ver donde lo vamos a guardar
+         $query = "INSERT INTO
+                    paciente 
+                        (`peso`)
+                    VALUES
+                        ('".$data['peso']."');";
+        try
+        {
+            $this->db->conectar();
+            $this->db->ejecutarAccion($query);
+        }
+        catch (Exception $e)
+        {
+            $this->db->desconectar();
+            $e->getMessage();
+            throw new Exception("Error al conectar con la base de datos", 17052013);
+        }
+    $this->db->desconectar();
+    }
+    
+
+    function insertarNuevoTac($data)
+    {
+        //por ahora lo agrego en paciente, hay que ver donde lo vamos a guardar
+        $query = "INSERT INTO
+                    paciente
+                        (`tac`,
+                        `ca`,
+                        `cvc`)
+                    VALUES
+                        ('".$data['tac']."',
+                        '".$data['ca']."',
+                        '".$data['cvc']."');";
+        try
+        {
+            $this->db->conectar();
+            $this->db->ejecutarAccion($query);
+        }
+        catch (Exception $e)
+        {
+            $this->db->desconectar();
+            $e->getMessage();
+            throw new Exception("Error al conectar con la base de datos", 17052013);
+        }
+    $this->db->desconectar();
+    }
     
     
     

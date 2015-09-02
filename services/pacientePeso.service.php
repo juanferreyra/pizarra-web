@@ -5,7 +5,7 @@
 
 $pacDb = new PacienteDao ();
 
-if($pacDb->insertarNuevoPaciente($_POST))
+if($pacDb->insertarNuevoPeso($_POST))
 {
     echo "Datos cargados correctamente";
 }
