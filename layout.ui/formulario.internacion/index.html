@@ -33,10 +33,10 @@
 					</div>-->
 				</nav>
 				<nav class="menu-side">
-					<a href="#" data-dialog="dialog_laboratorio" class="trigger" id="laboratorio">Cargar Laboratorios</a>
-					<a href="#" data-dialog="dialog_paciente" class="trigger" id="paciente" >Cargar Paciente</a>
-					<a href="#" data-dialog="dialog_peso" class="trigger" id="paciente_peso">Cargar Peso</a>
-					<a href="#" data-dialog="dialog_tet" class="trigger" id="TET">Cargar TET CVC CA</a>
+					<a href="#" data-dialog="somedialog" class="trigger" id="laboratorio">Cargar Laboratorios</a>
+					<a href="#" data-dialogo="somedialog2" class="trigger" id="paciente" >Cargar Paciente</a>
+					<a href="#" data-dialogoo="somedialog3" class="trigger" id="paciente_peso">Cargar Peso</a>
+					<a href="#" data-dialogooo="somedialog4" class="trigger" id="TET">Cargar TET CVC CA</a>
 				</nav>
 			</div>
 			<button class="menu-button" id="open-button">Abrir Menu</button>
@@ -141,45 +141,45 @@
 			</div><!-- /content-wrap -->
 		</div><!-- /container -->
 
-		<div id="dialog_laboratorio" class="dialog">
+		<div id="somedialog" class="dialog">
 			<div class="dialog__overlay">
 			</div>
 			<div class="dialog__content">
 				<button class="action" data-dialog-close>Cerrar</button>
-				<div id="contenido_laboratorio">
+				<div id="dialog_subcontent">
 
 				</div>
 			</div>
 		</div>
 
-		<div id="dialog_paciente" class="dialog">
+		<div id="somedialog2" class="dialog">
 			<div class="dialog__overlay">
 			</div>
 			<div class="dialog__content">
 				<button class="action" data-dialog-close>Cerrar</button>
-				<div id="contenido_paciente">
+				<div id="dialog_subcontent2">
 
 				</div>
 			</div>
 		</div>
 
-		<div id="dialog_peso" class="dialog">
+		<div id="somedialog3" class="dialog">
 			<div class="dialog__overlay">
 			</div>
 			<div class="dialog__content">
 				<button class="action" data-dialog-close>Cerrar</button>
-				<div id="contenido_paciente_peso">
+				<div id="dialog_subcontent3">
 
 				</div>
 			</div>
 		</div>
 
-		<div id="dialog_tet" class="dialog">
+		<div id="somedialog4" class="dialog">
 			<div class="dialog__overlay">
 			</div>
 			<div class="dialog__content">
 				<button class="action" data-dialog-close>Cerrar</button>
-				<div id="contenido_tet">
+				<div id="dialog_subcontent4">
 
 				</div>
 			</div>
@@ -192,11 +192,41 @@
 		<script>
 			(function() {
 
+				//dialogo de laboratorio
 				var dlgtrigger = document.querySelector( '[data-dialog]' ),
+
 					somedialog = document.getElementById( dlgtrigger.getAttribute( 'data-dialog' ) ),
+
 					dlg = new DialogFx( somedialog );
 
 				dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
+
+				//dialogo de persona
+				var dlgtrigger = document.querySelector( '[data-dialogo]' ),
+
+					somedialog2 = document.getElementById( dlgtrigger.getAttribute( 'data-dialogo' ) ),
+
+					dlg2 = new DialogFx( somedialog2 );
+
+				dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg2) );
+
+				//dialogo de persona
+				var dlgtrigger = document.querySelector( '[data-dialogoo]' ),
+
+					somedialog3 = document.getElementById( dlgtrigger.getAttribute( 'data-dialogoo' ) ),
+
+					dlg3 = new DialogFx( somedialog3 );
+
+				dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg3) );
+
+				//dialogo de persona
+				var dlgtrigger = document.querySelector( '[data-dialogooo]' ),
+
+					somedialog4 = document.getElementById( dlgtrigger.getAttribute( 'data-dialogooo' ) ),
+
+					dlg4 = new DialogFx( somedialog4 );
+
+				dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg4) );
 
 			})();
 		</script>
