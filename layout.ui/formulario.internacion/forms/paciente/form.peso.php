@@ -7,5 +7,5 @@
 <label for='peso'>Peso Actual en Kg.</label>
 <input type='text' name='peso' />
 <br />
-<input type="submit" value="Ingresar">
+<input type="submit" value="Ingresar" class="button_submit">
 </form>

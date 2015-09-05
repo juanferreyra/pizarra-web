@@ -14,5 +14,5 @@
 <label for='ca'>CA</label>
 <input type='text' name='ca' />
 <br />
-<input type="submit" value="Ingresar">
+<input type="submit" value="Ingresar" class="button_submit">
 </form>

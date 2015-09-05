@@ -6,22 +6,35 @@
 -Agregar la cama y de que lado esta internado
 -Mostrar en la grilla las internaciones cargadas
 -->
+<style>
+
+    .espaciados{
+    text-align:end;
+        float:center;
+        
+    }
+    
+
+    
+</style>
 <h2>
 	<strong>Datos personales paciente</strong>
 </h2>
 <hr>
 <form id="frmPaciente" action="../../../services/paciente.service.php" method="POST">
-
+<div class="espaciados">
 <label for='nombre'>Nombre</label>
 <input type='text' name='nombre' />
-<br />
 <label for='fechanac'>Fecha Nacimiento</label>
 <input type='text' name='fechanac' />
 <br />
+<br />
+</div>
 <label for='tipodoc'>Tipo Documento</label>
 <input type='text' name='tipodoc' />
-<label for='nrodoc'>Numero Documento</label>
+&nbsp; &nbsp; <label for='nrodoc'>Numero Documento</label>
 <input type='text' name='nrodoc' /> 
 <br />
-<input type="submit" value="Submit">
+<br />
+<input type="submit" value="Ingresar" class="button_submit">
 </form>
