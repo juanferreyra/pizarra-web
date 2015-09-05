@@ -5,12 +5,12 @@
 -Cargar los datos guardados en la base en el menu de internacion
 -Agregar la cama y de que lado esta internado
 -Mostrar en la grilla las internaciones cargadas
-
 -->
-
-<h3>Datos personales paciente</h3>
+<h2>
+	<strong>Datos personales paciente</strong>
+</h2>
 <hr>
-<form id="frmPaciente" action="../../services/paciente.service.php" method="POST">
+<form id="frmPaciente" action="../../../services/paciente.service.php" method="POST">
 
 <label for='nombre'>Nombre</label>
 <input type='text' name='nombre' />

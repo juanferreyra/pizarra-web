@@ -33,11 +33,10 @@
 					</div>-->
 				</nav>
 				<nav class="menu-side">
-					<a href="#" data-dialog="somedialog" class="trigger" id="laboratorio">Cargar Laboratorios</a>
-					<a href="#" data-dialog="dialog_paciente" class="trigger">Cargar Paciente</a>
-					<a href="#" data-dialog="dialog_variables" class="trigger">Cargar Peso</a>
-					<a href="#" data-dialog="dialog_tet" class="trigger">Cargar TET CVC CA</a>
-					<a href="#" data-dialog="dialog_diagnostico" class="trigger">Ingresar/Actualizar Diagnostico</a>
+					<a href="#" data-dialog="dialog_laboratorio" class="trigger" id="laboratorio">Cargar Laboratorios</a>
+					<a href="#" data-dialog="dialog_paciente" class="trigger" id="paciente" >Cargar Paciente</a>
+					<a href="#" data-dialog="dialog_peso" class="trigger" id="paciente_peso">Cargar Peso</a>
+					<a href="#" data-dialog="dialog_tet" class="trigger" id="TET">Cargar TET CVC CA</a>
 				</nav>
 			</div>
 			<button class="menu-button" id="open-button">Abrir Menu</button>
@@ -142,12 +141,45 @@
 			</div><!-- /content-wrap -->
 		</div><!-- /container -->
 
-		<div id="somedialog" class="dialog">
+		<div id="dialog_laboratorio" class="dialog">
 			<div class="dialog__overlay">
 			</div>
 			<div class="dialog__content">
 				<button class="action" data-dialog-close>Cerrar</button>
-				<div id="contenido">
+				<div id="contenido_laboratorio">
+
+				</div>
+			</div>
+		</div>
+
+		<div id="dialog_paciente" class="dialog">
+			<div class="dialog__overlay">
+			</div>
+			<div class="dialog__content">
+				<button class="action" data-dialog-close>Cerrar</button>
+				<div id="contenido_paciente">
+
+				</div>
+			</div>
+		</div>
+
+		<div id="dialog_peso" class="dialog">
+			<div class="dialog__overlay">
+			</div>
+			<div class="dialog__content">
+				<button class="action" data-dialog-close>Cerrar</button>
+				<div id="contenido_paciente_peso">
+
+				</div>
+			</div>
+		</div>
+
+		<div id="dialog_tet" class="dialog">
+			<div class="dialog__overlay">
+			</div>
+			<div class="dialog__content">
+				<button class="action" data-dialog-close>Cerrar</button>
+				<div id="contenido_tet">
 
 				</div>
 			</div>

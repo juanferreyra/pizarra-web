@@ -1,4 +1,6 @@
-<h3>Datos personales paciente</h3>
+<h2>
+	<strong>Datos personales paciente</strong>
+</h2>
 <hr>
 <form id="frmPaciente" action="../../services/pacientePeso.service.php" method="POST">
 

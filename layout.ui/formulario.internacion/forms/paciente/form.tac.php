@@ -1,7 +1,8 @@
-<h3>TAC CVC CA</h3>
+<h2>
+	<strong>TAC CVC CA</strong>
+</h2>
 <hr>
 <form id="frmPaciente" action="../../services/pacienteTac.service.php" method="POST">
-
 <label for='tac'>TAC</label>
 <input type='text' name='tac' />
 <br />
