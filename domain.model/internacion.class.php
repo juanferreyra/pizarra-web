@@ -2,87 +2,31 @@
 include_once 'paciente.class.php';
 include_once 'laboratorio.class.php';
 
-class Internaciones
+class Internacion
 {
     var $paciente;
+    var $procedencia;
+    var $fechaInternacion;
+
+    var $ventilaciones;
     var $tet; //tubo endotraqueal
     var $cvc; //cateter venoso caasdasd
     var $ca;
-    var $procedencia;
-    var $fechaInternacion;//estas deberian estar en internacion?
-    var $laboratorio;
-    var $examenComplementario;
+    var $sv;
+    var $drenajes;
+
+    var $laboratorios;
+
     var $cultivos;
-    var $inotropicoDulucionDosis;
-    var $atbDosisDia;
+    var $idd;//isotropico degrucion dosis
+    var $add;//ATB Dosis dia
     var $aportes;
-    var $sedacion;
-    var $otros;
-    var $comentario;
+    var $sedaciones;
+    var $comentarios;
     //donde van los setting arm eab iono y hora?
     
-    function Internaciones()
+    function Internacion()
     {
-        $this->laboratorio = new Laboratorio();
         $this->paciente = new Paciente();
     }
-    
-    //Set
-    function setTet($value)
-    {
-        $this->tet = $value;
-    }
-    
-    function setCvc($value)
-    {
-        $this->cvc = $value;
-    }
-    
-    function setCa($value)
-    {
-        $this->ca = $value;
-    }
-    
-    function setProcedencia($value)
-    {
-        $this->procedencia = $value;
-    }
-    
-    function setFechaInternacion($value)
-    {
-        $this->fechaInternacion = $value;
-    }
-
-    function addItemLaboratorio ($descripcion, $indice, $valor)
-    {
-        $this->laboratorio->agregarItem($descripcion, $indice, $valor);
-    }
-    
-    //Get
-    function getTet()
-    {
-        return $this->tet;
-    }
-    
-    function getCvc()
-    {
-        return $this->cvc;
-    }
-    
-    function getCa()
-    {
-        return $this->ca;
-    }
-    
-    function getProcedencia()
-    {
-        return $this->procedencia;
-    }
-    
-    function getFechaInternacion()
-    {
-        return $this->fechaInternacion;
-    }
-    
-
 }

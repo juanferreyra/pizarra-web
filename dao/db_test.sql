@@ -138,3 +138,34 @@ CREATE TABLE `uti`.`internacion_laboratorio_valores` (
   `idinternacion_laboratorio` INT NULL COMMENT '',
   `valor` VARCHAR(45) NULL COMMENT '',
   PRIMARY KEY (`idlaboratorio_item`)  COMMENT '');
+
+CREATE TABLE `uti`.`camas` (
+  `id` int(11) NOT NULL,
+  `tipo_cama` enum('UCIRQ','UCI') DEFAULT NULL,
+  `nro_cama` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+INSERT INTO `uti`.`camas` (`id`, `tipo_cama`, `nro_cama`) VALUES ('1', 'UCIRQ', '1');
+INSERT INTO `uti`.`camas` (`id`, `tipo_cama`, `nro_cama`) VALUES ('2', 'UCIRQ', '2');
+INSERT INTO `uti`.`camas` (`id`, `tipo_cama`, `nro_cama`) VALUES ('3', 'UCIRQ', '3');
+INSERT INTO `uti`.`camas` (`id`, `tipo_cama`, `nro_cama`) VALUES ('4', 'UCIRQ', '4');
+INSERT INTO `uti`.`camas` (`id`, `tipo_cama`, `nro_cama`) VALUES ('5', 'UCIRQ', '5');
+INSERT INTO `uti`.`camas` (`id`, `tipo_cama`, `nro_cama`) VALUES ('6', 'UCIRQ', '6');
+INSERT INTO `uti`.`camas` (`id`, `tipo_cama`, `nro_cama`) VALUES ('7', 'UCIRQ', '7');
+INSERT INTO `uti`.`camas` (`id`, `tipo_cama`, `nro_cama`) VALUES ('8', 'UCIRQ', '8');
+INSERT INTO `uti`.`camas` (`id`, `tipo_cama`, `nro_cama`) VALUES ('9', 'UCIRQ', '9');
+INSERT INTO `uti`.`camas` (`id`, `tipo_cama`, `nro_cama`) VALUES ('10', 'UCIRQ', '10');
+INSERT INTO `uti`.`camas` (`id`, `tipo_cama`, `nro_cama`) VALUES ('11', 'UCIRQ', '11');
+INSERT INTO `uti`.`camas` (`id`, `tipo_cama`, `nro_cama`) VALUES ('12', 'UCI', '1');
+INSERT INTO `uti`.`camas` (`id`, `tipo_cama`, `nro_cama`) VALUES ('13', 'UCI', '2');
+INSERT INTO `uti`.`camas` (`id`, `tipo_cama`, `nro_cama`) VALUES ('14', 'UCI', '3');
+INSERT INTO `uti`.`camas` (`id`, `tipo_cama`, `nro_cama`) VALUES ('15', 'UCI', '4');
+INSERT INTO `uti`.`camas` (`id`, `tipo_cama`, `nro_cama`) VALUES ('16', 'UCI', '5');
+INSERT INTO `uti`.`camas` (`id`, `tipo_cama`, `nro_cama`) VALUES ('17', 'UCI', '6');
+INSERT INTO `uti`.`camas` (`id`, `tipo_cama`, `nro_cama`) VALUES ('18', 'UCI', '7');
+INSERT INTO `uti`.`camas` (`id`, `tipo_cama`, `nro_cama`) VALUES ('19', 'UCI', '8');
+INSERT INTO `uti`.`camas` (`id`, `tipo_cama`, `nro_cama`) VALUES ('20', 'UCI', '9');
+INSERT INTO `uti`.`camas` (`id`, `tipo_cama`, `nro_cama`) VALUES ('21', 'UCI', '10');
+INSERT INTO `uti`.`camas` (`id`, `tipo_cama`, `nro_cama`) VALUES ('22', 'UCI', '11');
