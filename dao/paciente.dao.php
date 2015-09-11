@@ -23,7 +23,7 @@ class pacienteDao
         $this->db = new dataBaseConnector(HOSTLocal,0,DBUti,USRDBAdmin,PASSDBAdmin);
     }
     
-    public function insertarNuevoPaciente($data)
+    public function insertarNuevoPaciente($data, $hisclin)
     {
         $query = "INSERT INTO
                     paciente
@@ -31,13 +31,23 @@ class pacienteDao
                         `nrodoc`,
                         `nombre`,
                         `fechanac`,
-                        `nrohisclin`)
+                        `nrohisclin`,
+                        `direccion`,
+                        `localidad`,
+                        `provincia`,
+                        `sexo`,
+                        `telefono`)
                     VALUES
-                        ('".$data['tipoDoc']."',
-                        '".$data['nroDoc']."',
+                        (".$data['tipodoc'].",
+                        ".$data['nrodoc'].",
                         '".$data['nombre']."',
-                        '".$data['fechaNac']."',
-                        '".$data['nroHisclin']."');";
+                        '".$data['fechanac']."',
+                        ".$hisclin.",
+                        '".$data['direccion']."',
+                        '".$data['localidad']."',
+                        '".$data['provincia']."',
+                        '".$data['sexo']."',
+                        '".$data['telefono']."');";
         try
         {
             $this->db->conectar();
