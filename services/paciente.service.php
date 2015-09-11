@@ -5,7 +5,7 @@
 
 $pacDb = new PacienteDao ();
 
-if($pacDb->insertarNuevoPaciente($_POST))
+if($pacDb->insertarNuevoPaciente($_POST, 1))
 {
     echo "Datos cargados correctamente";
 }
@@ -13,3 +13,4 @@ else
 {
     echo "Hubo un error al cargar los datos";
 }
+

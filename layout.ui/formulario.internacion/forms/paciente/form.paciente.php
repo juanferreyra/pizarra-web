@@ -11,6 +11,7 @@
     .espaciados{
     text-align:end;
         float:center;
+        display:inline-block;
         
     }
     
@@ -21,19 +22,38 @@
 	<strong>Datos personales paciente</strong>
 </h2>
 <hr>
-<form id="frmPaciente" action="../../../services/paciente.service.php" method="POST">
+<form id="frmPaciente" action="../../services/paciente.service.php" method="POST">
 <div class="espaciados">
 <label for='nombre'>Nombre</label>
 <input type='text' name='nombre' />
+<br />
 <label for='fechanac'>Fecha Nacimiento</label>
 <input type='text' name='fechanac' />
 <br />
+<label for='direccion'>Direccion</label>
+<input type='text' name='direccion' />
 <br />
-</div>
+<label for='localidad'>Localidad</label>
+<input type='text' name='localidad' />
+<br />
+<label for='provincia'>Provincia</label>
+<input type='text' name='provincia' />
+<br />
+<label for='sexo'>Sexo</label>
+<select name="sexo">
+<option value="M">M</option>
+<option value="F">F</option>
+</select>
+<br />
+<label for='telefono'>Telefono</label>
+<input type='text' name='telefono' />
+<br />
 <label for='tipodoc'>Tipo Documento</label>
 <input type='text' name='tipodoc' />
-&nbsp; &nbsp; <label for='nrodoc'>Numero Documento</label>
+<br />
+<label for='nrodoc'>Numero Documento</label>
 <input type='text' name='nrodoc' /> 
+</div>
 <br />
 <br />
 <input type="submit" value="Ingresar" class="button_submit">
