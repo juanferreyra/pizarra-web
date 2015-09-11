@@ -12,35 +12,6 @@
 		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/menu_topside.css" />
 		<link rel="stylesheet" type="text/css" href="css/dialog.css" />
-        <style>
-        .divider{
-    color:#ccc;
-    width:70%;
-    margin:20px auto;
-    overflow:hidden;
-    text-align:center;   
-    line-height:1.2em;
-}
-
-.divider:before, .divider:after{
-    content:"";
-    vertical-align:top;
-    display:inline-block;
-    width:25%;
-    height:0.65em;
-    border-bottom:1px solid #ccc;
-    margin:0 2% 0 -55%;
-}
-.divider:after{
-    margin:0 -55% 0 2%;
-}
-            
-            .center{
-            text-align: center;}
-            
-             h1{font-size: 1.5em;}
-
-        </style>
 
 		<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
 		<script src="js/modernizr.custom.js"></script>
@@ -74,28 +45,98 @@
 					<header class="codrops-header">
 					</header>
 				</div>
-				<div class="center"> <!--inicio de formulario-->
-					<h1 class="divider">Paciente</h1>
-                    <p>Nombre: </p>
-                    <p>Edad: </p>
-                    <p>Peso: </p>
-                    <h1 class="divider">Diagnostico</h1>
-                    <h1 class="divider">Procedencia</h1>
-                    <h1 class="divider">Fecha Internacion</h1>
-                    <h1 class="divider">Laboratorio</h1>
-                    <p>TET</p>
-                    <p>CVC</p>
-                    <p>CA</p>
-                    <p>EAB</p>
-                    <p>IONO</p>
-                    <h1 class="divider">Examen Complementario</h1>
-                    <h1 class="divider">Cultivos</h1>
-                    <h1 class="divider">Inotropico dulucion dosis</h1>
-                    <h1 class="divider">Sedacion</h1>
-                    <h1 class="divider">ATB Dosis dia</h1>
-                    <h1 class="divider">Setting ARM</h1>
-                    
-                
+				<div> <!--inicio de formulario-->
+					<table border="1">
+						<tr>
+						    <td>
+						        Nombre: 
+						    </td>
+						    <td>
+						        Procedencia: 
+						    </td>
+						    <td>
+						        Fecha Inter: 
+						    </td>
+						</tr>
+						<tr>
+						    <td>
+						        Dia Internacion: 
+						    </td>
+						    <td rowspan="6">
+						        Diagnositcos:
+						    </td>
+						    <td rowspan="6">
+						        Setting ARM:
+						    </td>
+						    <td rowspan="6">
+						        EAB: 
+						    </td>
+						    <td rowspan="6">
+						        IONO: 
+						    </td>
+						    <td rowspan="6">
+						        Hora: 
+						    </td>
+						</tr>
+						<tr>
+						    <td>
+						    	Edad:
+						    </td>
+						</tr>
+						<tr>
+						    <td>
+						    	Peso: 
+						    </td>
+						</tr>
+						<tr>
+						    <td>
+						    	TET: 
+						    </td>
+						</tr>
+						<tr>
+						    <td>
+						    	CVC:
+						    </td>
+						</tr>
+						<tr>
+						    <td>
+						    	CA:
+						    </td>
+						</tr>
+						<tr>
+						    <td colspan="2">
+						    	Laboratorio:
+						    </td>
+						    <td colspan="2">
+						    	Inotropico dilucion dosis: 
+						    </td>
+						    <td colspan="2">
+						    	ATB dosis dia: 
+						    </td>
+						</tr>
+						<tr>
+						    <td colspan="2">
+						    	Examen Complementario:
+						    </td>
+						    <td colspan="2">
+						    	Sedacion: 
+						    </td>
+						    <td colspan="2">
+						    	Aportes:
+						    </td>
+						</tr>
+						<tr>
+						    <td colspan="2">
+						    	Cultivos: 
+						    </td>
+						    <td colspan="2">
+						    	Otros: 
+						    </td>
+						    <td colspan="2">
+						    	Comentarios:
+						    </td>
+						</tr>
+					</table>
 				</div>	<!-- fin de formulario-->
 			</div><!-- /content-wrap -->
 		</div><!-- /container -->
