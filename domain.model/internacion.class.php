@@ -5,15 +5,14 @@ include_once 'laboratorio.class.php';
 class Internacion
 {
     var $paciente;
+
     var $procedencia;
+
     var $fechaInternacion;
 
     var $ventilaciones;
-    var $tet; //tubo endotraqueal
-    var $cvc; //cateter venoso caasdasd
-    var $ca;
-    var $sv;
-    var $drenajes;
+
+    var $procedimientos_invasivos;//ARM, TET, CVC, CART, DRENAJES y SONDA VESICAL
 
     var $laboratorios;
 
@@ -28,5 +27,9 @@ class Internacion
     function Internacion()
     {
         $this->paciente = new Paciente();
+        $this->procedimientos_invasivos = array();
+        $this->laboratorios = array();
     }
+
+    
 }
