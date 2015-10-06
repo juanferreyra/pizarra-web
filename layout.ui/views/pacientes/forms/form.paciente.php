@@ -22,7 +22,7 @@
 	<strong>Datos personales paciente</strong>
 </h2>
 <hr>
-<form id="frmPaciente" action="../../services/paciente.service.php" method="POST">
+<form id="frmPaciente" action="../../../services/paciente.service.php" method="POST">
 <div class="espaciados">
 <label for='nombre'>Nombre</label>
 <input type='text' name='nombre' />

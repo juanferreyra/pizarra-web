@@ -74,14 +74,23 @@ CREATE TABLE `internacion_tet` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+delimiter $$
+
 CREATE TABLE `paciente` (
   `tipodoc` int(11) NOT NULL,
   `nrodoc` int(11) NOT NULL,
   `nombre` varchar(45) DEFAULT NULL,
   `fechanac` date DEFAULT NULL,
   `nrohisclin` int(11) DEFAULT NULL,
+  `direccion` varchar(45) DEFAULT NULL,
+  `localidad` varchar(45) DEFAULT NULL,
+  `provincia` varchar(45) DEFAULT NULL,
+  `sexo` varchar(45) DEFAULT NULL,
+  `telefono` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`tipodoc`,`nrodoc`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+
+
 
 CREATE TABLE `uti`.`laboratorio_item` (
   `id` INT NOT NULL AUTO_INCREMENT COMMENT '',
