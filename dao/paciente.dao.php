@@ -27,6 +27,7 @@ class pacienteDao
     {
         $query = "INSERT INTO paciente (`tipodoc`,`nrodoc`,`nombre`,`fechanac`,`nrohisclin`,`direccion`,`localidad`,`provincia`,`sexo`,`telefono`)
                     VALUES (".$data['tipodoc'].",".$data['nrodoc'].",'".$data['nombre']."','".$data['fechanac']."',".$hisclin.",'".$data['direccion']."','".$data['localidad']."','".$data['provincia']."','".$data['sexo']."','".$data['telefono']."');";
+        
         try
         {
             $this->db->conectar();
@@ -116,7 +117,7 @@ class pacienteDao
         $response->userdata['nrodoc'] = 'nrodoc';
         $response->userdata['nombre'] = 'nombre';
         $response->userdata['myac'] = '';
-
+x
         return json_encode($response);
     }
 
