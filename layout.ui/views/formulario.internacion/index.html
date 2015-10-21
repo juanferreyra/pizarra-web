@@ -7,38 +7,42 @@
 		<title>Formulario Internacion</title>
 		<meta name="author" content="Los Juanes" />
 		
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/menu_topside.css" />
-		<link rel="stylesheet" type="text/css" href="css/dialog.css" />
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="../../includes/plugins/jquery-ui-1.11.4/jquery-ui.css" />
         <style>
-        .divider{
-    color:#ccc;
-    width:70%;
-    margin:20px auto;
-    overflow:hidden;
-    text-align:center;   
-    line-height:1.2em;
-}
 
-.divider:before, .divider:after{
-    content:"";
-    vertical-align:top;
-    display:inline-block;
-    width:25%;
-    height:0.65em;
-    border-bottom:1px solid #ccc;
-    margin:0 2% 0 -55%;
-}
-.divider:after{
-    margin:0 -55% 0 2%;
-}
+        .divider{
+		    color:#ccc;
+		    width:70%;
+		    margin:20px auto;
+		    overflow:hidden;
+		    text-align:center;   
+		    line-height:1.2em;
+		}
+
+		.divider:before, .divider:after{
+		    content:"";
+		    vertical-align:top;
+		    display:inline-block;
+		    width:25%;
+		    height:0.65em;
+		    border-bottom:1px solid #ccc;
+		    margin:0 2% 0 -55%;
+		}
+
+		.divider:after{
+		    margin:0 -55% 0 2%;
+		}
+		
+        .center{
+        	text-align: center;
+        }
             
-            .center{
-            text-align: center;}
-            
-             h1{font-size: 1.5em;}
+        h1{
+        	font-size: 1.5em;
+        }
 
         </style>
 
@@ -62,10 +66,10 @@
 					</div>-->
 				</nav>
 				<nav class="menu-side">
-					<a href="#" data-dialog="somedialog" class="trigger" id="laboratorio">Cargar Laboratorios</a>
-					<a href="#" data-dialogo="somedialog2" class="trigger" id="paciente" >Cargar Paciente</a>
-					<a href="#" data-dialogoo="somedialog3" class="trigger" id="paciente_peso">Cargar Peso</a>
-					<a href="#" data-dialogooo="somedialog4" class="trigger" id="TET">Cargar TET CVC CA</a>
+					<a href="#" class="trigger" id="laboratorio">Cargar Laboratorios</a>
+					<a href="#" class="trigger" id="paciente" >Cargar Paciente</a>
+					<a href="#" class="trigger" id="paciente_peso">Cargar Peso</a>
+					<a href="#" class="trigger" id="TET">Cargar TET CVC CA</a>
 				</nav>
 			</div>
 			<button class="menu-button" id="open-button">Abrir Menu</button>
@@ -93,101 +97,47 @@
                     <h1 class="divider">Inotropico dulucion dosis</h1>
                     <h1 class="divider">Sedacion</h1>
                     <h1 class="divider">ATB Dosis dia</h1>
-                    <h1 class="divider">Setting ARM</h1>
-                    
-                
+                    <h1 class="divider">Setting ARM</h1>                
 				</div>	<!-- fin de formulario-->
 			</div><!-- /content-wrap -->
 		</div><!-- /container -->
 
-		<div id="somedialog" class="dialog">
-			<div class="dialog__overlay">
-			</div>
-			<div class="dialog__content">
-				<button class="action" data-dialog-close>Cerrar</button>
-				<div id="dialog_subcontent">
-
-				</div>
-			</div>
+		<!-- ui-dialog -->
+		<div id="dialog" title="Dialog Title">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 		</div>
 
-		<div id="somedialog2" class="dialog">
-			<div class="dialog__overlay">
-			</div>
-			<div class="dialog__content">
-				<button class="action" data-dialog-close>Cerrar</button>
-				<div id="dialog_subcontent2">
-
-				</div>
-			</div>
-		</div>
-
-		<div id="somedialog3" class="dialog">
-			<div class="dialog__overlay">
-			</div>
-			<div class="dialog__content">
-				<button class="action" data-dialog-close>Cerrar</button>
-				<div id="dialog_subcontent3">
-
-				</div>
-			</div>
-		</div>
-
-		<div id="somedialog4" class="dialog">
-			<div class="dialog__overlay">
-			</div>
-			<div class="dialog__content">
-				<button class="action" data-dialog-close>Cerrar</button>
-				<div id="dialog_subcontent4">
-
-				</div>
-			</div>
-		</div>
-
-		<script src="js/dialogFx.js"></script>
 		<script src="js/classie.js"></script>
 		<script src="js/main.js"></script>
+		<script type="text/javascript" src="../../includes/plugins/jquery-ui-1.11.4/external/jquery/jquery.js"></script>
+		<script type="text/javascript" src="../../includes/plugins/jquery-ui-1.11.4/jquery-ui.js"></script>
 		
 		<script>
-			(function() {
 
-				//dialogo de laboratorio
-				var dlgtrigger = document.querySelector( '[data-dialog]' ),
+			$( "#laboratorio" ).click(function( event ) {
+				$( "#dialog" ).dialog( "open" );
+				event.preventDefault();
+			});
 
-					somedialog = document.getElementById( dlgtrigger.getAttribute( 'data-dialog' ) ),
-
-					dlg = new DialogFx( somedialog );
-
-				dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
-
-				//dialogo de persona
-				var dlgtrigger = document.querySelector( '[data-dialogo]' ),
-
-					somedialog2 = document.getElementById( dlgtrigger.getAttribute( 'data-dialogo' ) ),
-
-					dlg2 = new DialogFx( somedialog2 );
-
-				dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg2) );
-
-				//dialogo de persona
-				var dlgtrigger = document.querySelector( '[data-dialogoo]' ),
-
-					somedialog3 = document.getElementById( dlgtrigger.getAttribute( 'data-dialogoo' ) ),
-
-					dlg3 = new DialogFx( somedialog3 );
-
-				dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg3) );
-
-				//dialogo de persona
-				var dlgtrigger = document.querySelector( '[data-dialogooo]' ),
-
-					somedialog4 = document.getElementById( dlgtrigger.getAttribute( 'data-dialogooo' ) ),
-
-					dlg4 = new DialogFx( somedialog4 );
-
-				dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg4) );
-
-			})();
+			$( "#dialog" ).dialog({
+				autoOpen: false,
+				width: 400,
+				buttons: [
+					{
+						text: "Ok",
+						click: function() {
+							$( this ).dialog( "close" );
+						}
+					},
+					{
+						text: "Cancelar",
+						click: function() {
+							$( this ).dialog( "close" );
+						}
+					}
+				]
+			});
 		</script>
+	
 	</body>
 </html>
