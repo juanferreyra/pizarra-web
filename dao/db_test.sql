@@ -77,6 +77,7 @@ CREATE TABLE `internacion_tet` (
 delimiter $$
 
 CREATE TABLE `paciente` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `tipodoc` int(11) NOT NULL,
   `nrodoc` int(11) NOT NULL,
   `nombre` varchar(45) DEFAULT NULL,
@@ -87,9 +88,8 @@ CREATE TABLE `paciente` (
   `provincia` varchar(45) DEFAULT NULL,
   `sexo` varchar(45) DEFAULT NULL,
   `telefono` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`tipodoc`,`nrodoc`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
-
+  PRIMARY KEY (`id`,`tipodoc`,`nrodoc`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 
 CREATE TABLE `uti`.`laboratorio_item` (
