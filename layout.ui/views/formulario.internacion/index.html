@@ -48,7 +48,6 @@
 
 		<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
 		<script src="js/modernizr.custom.js"></script>
-		<script type="text/javascript" src="js/formulario_uti.js"></script>
 		<!--[if IE]>
   		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -67,7 +66,6 @@
 				</nav>
 				<nav class="menu-side">
 					<a href="#" class="trigger" id="laboratorio">Cargar Laboratorios</a>
-					<a href="#" class="trigger" id="paciente" >Cargar Paciente</a>
 					<a href="#" class="trigger" id="paciente_peso">Cargar Peso</a>
 					<a href="#" class="trigger" id="TET">Cargar TET CVC CA</a>
 				</nav>
@@ -103,41 +101,13 @@
 		</div><!-- /container -->
 
 		<!-- ui-dialog -->
-		<div id="dialog" title="Dialog Title">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		<div id="dialog" >
 		</div>
 
 		<script src="js/classie.js"></script>
 		<script src="js/main.js"></script>
 		<script type="text/javascript" src="../../includes/plugins/jquery-ui-1.11.4/external/jquery/jquery.js"></script>
 		<script type="text/javascript" src="../../includes/plugins/jquery-ui-1.11.4/jquery-ui.js"></script>
-		
-		<script>
-
-			$( "#laboratorio" ).click(function( event ) {
-				$( "#dialog" ).dialog( "open" );
-				event.preventDefault();
-			});
-
-			$( "#dialog" ).dialog({
-				autoOpen: false,
-				width: 400,
-				buttons: [
-					{
-						text: "Ok",
-						click: function() {
-							$( this ).dialog( "close" );
-						}
-					},
-					{
-						text: "Cancelar",
-						click: function() {
-							$( this ).dialog( "close" );
-						}
-					}
-				]
-			});
-		</script>
-	
+		<script type="text/javascript" src="js/formulario_uti.js"></script>
 	</body>
 </html>

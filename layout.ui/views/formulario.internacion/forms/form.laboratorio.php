@@ -1,10 +1,10 @@
+<style type="text/css">
+#box{
+	width: 60px;
+}
+
+</style>
 <div class="laboratorio">
-	<!--Titulo-->
-	<h2>
-		<strong>Ingresar Laboratorios</strong>
-	</h2>
-	<!-- /Titulo-->
-	<!--Cuerpo-->
 	<h3>Sangre</h3>
 	<hr>
 	<form id="frmLaboratorio" action="../../services/laboratorio.service.php" method="POST">
@@ -101,6 +101,5 @@
 		<td><input id="box" type='text' name='aspectoorina' /></td>
 	</tr>
 	</table>
-	<input class="button_submit" type="submit" value="Guardar">
 	</form>
 </div>
